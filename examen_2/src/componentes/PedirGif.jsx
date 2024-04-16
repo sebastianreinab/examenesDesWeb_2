@@ -1,29 +1,31 @@
 import React from "react";
 import { useState,useEffect } from "react";
+import { Gif } from "./Gif";
 
-export const PedirGif = ({gif}) => {
+export const PedirGif = ({gif, id, title, url}) => {
 
 
-    const [imagen,setImagen] = useState([])
+    const [images,setImagen] = useState([])
 
-    useEffect( () => {
-        getGifs();
+        useEffect( () => {
+            getGifs();
     }, [])
 
     const getGifs = async() => {
-        const url="https://api.giphy.com/v1/gifs/search?q=naruto&limit=10&api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ"
+        const url="https://api.giphy.com/v1/gifs/trending?api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ"
         const respuesta = await fetch(url);
-        const {datos} = await respuesta.json();
+        const {data} = await respuesta.json();
 
-        const gifs = datos.map( img => {
+        const gifst = data.map( img => {
             return {
                 id: img.id,
                 title: img.title,
-                url: img.images.downsized_medium.url
+                url: img.images?.downsized_medium.url
             }
         })
-        console.log(gifs)
-        setImagen(gifs)
+
+        console.log(gifst)
+        setImagen(gifst)
 
     }
 
@@ -31,13 +33,15 @@ export const PedirGif = ({gif}) => {
         <>
             <div>
                 <h3>{gif}</h3>
-                <ol>
+                
                     {
-                        imagen.map( ({id, title}) => (
-                            <li key={id}>{title}</li>
+                        images.map( img => (
+                            <Gif 
+                                {...img}
+                                key={img.id}
+                            />
                         ))
-                    }
-                </ol>
+                    }              
             </div>
         </>
     )

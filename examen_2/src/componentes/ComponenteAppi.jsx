@@ -14,11 +14,14 @@ export const ComponenteAppi =  () => {
             <hr/>
             <ol>
                 {
-                    gifs.map(gif =>
-                        <PedirGif 
-                            key={gif}
-                            gif={gif}/>
-                    )
+                    gifs.map(
+                        (gif, key) =>
+                            {
+                               return  <PedirGif 
+                                    key={gif}
+                                    gif={gif}/>
+                            }        
+                        )
                 }
             </ol>
         </>

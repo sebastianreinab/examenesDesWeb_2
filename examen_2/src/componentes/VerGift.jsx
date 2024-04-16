@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-export const VerGift = () => {
+export const VerGift = ({setGifs}) => {
 
-    const [algo, setAlgo] = useState("buscar")
+    const [algo, setAlgo] = useState("")
 
     const valorCambio = (e) => {
         setAlgo(e.target.value);
@@ -10,7 +10,12 @@ export const VerGift = () => {
 
     const buscar = (e) => {
         e.preventDefault();
-        console.log("busqueda hecha");
+
+        if(algo.trim().length > 2) {
+            setGifs(gif => [...gif, algo]);
+            setAlgo("");
+        }
+        
     }
 
     return(

@@ -1,29 +1,24 @@
 import { useState } from "react"
 import { VerGift } from "./VerGift";
+import { PedirGif } from "./PedirGif";
 
 export const ComponenteAppi =  () => {
 
-    //const[gif, setGif] = useState([]);
 
-    const [categories,setCategories] = useState([]);
-
-    const handleAdd = () =>{
-        setCategories([...categories, ''])
-    }
-
-    
+    const [gifs,setGifs] = useState([]);
 
     return(
         <>
             <h2>busque su gif</h2>
-            <VerGift/>
+            <VerGift setGifs={setGifs}/>
             <hr/>
-            <button onClick={() => handleAdd()}>Agregar</button>
             <ol>
                 {
-                    categories.map(category => {
-                        return <li key={category}>{category}</li>
-                    })
+                    gifs.map(gif =>
+                        <PedirGif 
+                            key={gif}
+                            gif={gif}/>
+                    )
                 }
             </ol>
         </>

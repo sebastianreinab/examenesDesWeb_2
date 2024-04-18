@@ -9,7 +9,9 @@ export const ComponenteAppi =  () => {
 
     return(
         <>
-            <h2>busque su gif</h2>
+            <header>
+                <h2>busque su gif</h2>
+            </header>
             <VerGift setGifs={setGifs}/>
             <hr/>
             <ol>

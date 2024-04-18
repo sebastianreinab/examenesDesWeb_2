@@ -8,7 +8,45 @@ body {
   }
 
 .imagenes {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    border: 1px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.imagenes img {
+  max-height: 170px;
+}
+
+.contenedor_img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0%;
+}
+
+.div_log {
+  border: 1px;
+  border-radius: 15px;
+  border-width: 1cap;
+  height: 100px;
+  width: 300px;
+}
+.form_log {
+  border: 1px;
+  border-radius: 15px;
+  border-width: 1cap;
+  height: 100px;
+  width: 300px;
+  font-style: italic;
 }

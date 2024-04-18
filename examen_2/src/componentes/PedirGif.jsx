@@ -13,8 +13,8 @@ export const PedirGif = ({gif}) => {
 
     const getGifs = async() => {
         const url=`https://api.giphy.com/v1/gifs/trending?api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ`
-        //const url=`api.giphy.com/v1/gifs/search?&api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ&q=${gif}`
-        //const url=`api.giphy.com/v1/gifs/search?limit=10&api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ&q=${gif}`
+        //const url=`https://api.giphy.com/v1/gifs/search?api_key=WOhpSaZQvEjQvmz0gevAItBzCEHbSoa4q&q=${gif}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        //const url=`api.giphy.com/v1/gifs/search?limit=10&api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ&q=naruto`
         //api.giphy.com/v1/gifs/search?limit=10&api_key=WkQFOUPuewhrmtUpLoiwZAFFKzKoCiAJ
         const respuesta = await fetch(url);
         const {data} = await respuesta.json();
@@ -34,7 +34,7 @@ export const PedirGif = ({gif}) => {
 
     return(
         <>
-            <div>
+            <div className="contenedor_img">
                 <h3>{gif}</h3>
                 
                     {

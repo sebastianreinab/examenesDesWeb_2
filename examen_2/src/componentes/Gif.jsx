@@ -6,7 +6,7 @@ export const Gif = ({ title, url }) => {
 
     return(
         <>
-            <div>
+            <div className="imagenes">
                 <img src={url} alt={title} />
                 <p>{title}</p>
             </div>

@@ -19,6 +19,9 @@ export const VerGift = ({setGifs}) => {
     }
 
     return(
+        
+        <div className="busqueda"> 
+        
         <form onSubmit={buscar}>
             <input 
                 type="text"
@@ -26,5 +29,6 @@ export const VerGift = ({setGifs}) => {
                 onChange={ valorCambio}
             />
         </form>
+        </div>
     )
 }

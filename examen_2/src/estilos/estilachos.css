@@ -50,3 +50,7 @@ header {
   width: 300px;
   font-style: italic;
 }
+
+.busqueda input {
+  border-radius: 10px;
+}

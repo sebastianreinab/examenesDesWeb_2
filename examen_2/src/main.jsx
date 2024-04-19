@@ -8,7 +8,7 @@ import { Login } from './componentes/Login.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Login/>
+    <ComponenteAppi />
   </React.StrictMode>,
 )
 //<ComponenteAppi />

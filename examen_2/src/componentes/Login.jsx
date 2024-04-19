@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { ComponenteAppi } from './ComponenteAppi';
-import {Link, Routes, Route} from "react-router-dom"
+
 
 export const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleLogin = () => {
     
     console.log('Usuario:', username);
     console.log('Contraseña:', password);
     
-  };
+  }
 
   return (
     <>
@@ -37,7 +37,7 @@ export const Login = () => {
           />
         </div>
         
-          <button type="button" onClick={handleLogin}>Iniciar sesión</button>
+        <button >Iniciar sesión</button>
        
       </form>
     </div>

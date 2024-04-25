@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ComponenteAppi } from './ComponenteAppi';
-
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
   const [username, setUsername] = useState('')
@@ -37,7 +37,9 @@ export const Login = () => {
           />
         </div>
         
-        <button >Iniciar sesión</button>
+        <Link to="/componenteApp" className='bts'>
+          <button >Iniciar sesión</button>
+        </Link>
        
       </form>
     </div>

@@ -54,3 +54,9 @@ header {
 .busqueda input {
   border-radius: 10px;
 }
+
+.head {
+margin: 0%;
+padding-top: 0%;
+position: sticky;
+}

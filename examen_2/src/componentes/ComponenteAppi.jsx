@@ -9,11 +9,14 @@ export const ComponenteAppi =  () => {
 
     return(
         <>
-            <header>
+        
+            <header className="head">
                 <h2>busque su gif</h2>
+                <VerGift setGifs={setGifs}/>
             </header>
-            <VerGift setGifs={setGifs}/>
+            
             <hr/>
+            
             <ol>
                 {
                     gifs.map(

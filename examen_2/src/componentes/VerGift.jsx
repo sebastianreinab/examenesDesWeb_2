@@ -27,6 +27,7 @@ export const VerGift = ({setGifs}) => {
                 type="text"
                 value={algo}
                 onChange={ valorCambio}
+                placeholder="Buscar"
             />
         </form>
         </div>
